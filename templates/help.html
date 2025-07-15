@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Inline CSS for setting background image */
+        body {
+            background: url("{{ url_for('static', filename='images/img3.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-title">Face Detection Web App</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/detect">Detect</a>
+            <a href="/help">Help</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Help & Instructions</h2>
+        <p>Welcome to the Face Detection Web App! Follow these steps to use the application effectively:</p>
+
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Navigate to the <strong>Detect</strong> page by clicking "Detect" in the navigation bar.</li>
+            <li>Click the <strong>Upload Image</strong> button and select an image containing a face.</li>
+            <li>Choose a detection method:
+                <ul>
+                    <li><strong>MTCNN:</strong> Multi-task Cascaded Convolutional Networks for face detection.</li>
+                    <li><strong>B-MTCNN:</strong> A modified version of MTCNN with improved accuracy.</li>
+                </ul>
+            </li>
+            <li>Click the <strong>Detect</strong> button to process the image.</li>
+            <li>View the detected faces along with confidence scores.</li>
+        </ul>
+
+        <h3>Troubleshooting</h3>
+        <ul>
+            <li><strong>Image not uploading?</strong> Ensure the file is in JPG, PNG, or JPEG format.</li>
+            <li><strong>Faces not detected?</strong> Try using a higher-quality image with clear facial features.</li>
+            <li><strong>Slow detection?</strong> Large images may take longer to process; try resizing before uploading.</li>
+        </ul>
+
+        <h3>Frequently Asked Questions</h3>
+        <p><strong>Q: What file formats are supported?</strong><br>A: You can upload images in JPG, PNG, or JPEG format.</p>
+        <p><strong>Q: Is there a limit to the image size?</strong><br>A: For optimal performance, keep images under 5MB.</p>
+        <p><strong>Q: What if the app doesn’t detect faces?</strong><br>A: Ensure faces are well-lit and visible. Try another image.</p>
+
+        <h3>Contact Support</h3>
+        <p>If you encounter any issues, please contact us at <a href="mailto:support@facedetectionapp.com">support@facedetectionapp.com</a>.</p>
+    </div>
+</body>
+</html>

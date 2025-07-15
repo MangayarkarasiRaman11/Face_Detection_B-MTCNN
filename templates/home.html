@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home - Face Detection Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Inline CSS for setting background image */
+        body {
+            background: url("{{ url_for('static', filename='images/img2.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="nav-title">Face Detection Web App</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/detect">Detect</a>
+        <a href="/help">Help</a>
+    </div>
+</div>
+
+    <div class="hero-container">
+    <h1 class="hero-title">Welcome to Face Detection Web App</h1>
+    <p class="hero-description">
+        Upload an image and detect faces using advanced AI models like MTCNN and B-MTCNN.<br><br>
+        Our AI-driven system provides highly accurate face detection for security, biometrics, and image processing.
+    </p>
+    <a href="/detect" class="hero-button">Start Detection</a>
+</div>
+<div class="features">
+    <div class="feature-box">
+        <h3>🔍 Advanced AI Models</h3>
+        <p>Using deep learning for precise face detection with minimal errors.</p>
+    </div>
+    <div class="feature-box">
+        <h3>⚡ Fast & Reliable</h3>
+        <p>Get real-time face detection results with optimized performance.</p>
+    </div>
+    <div class="feature-box">
+        <h3>🎨 User-Friendly Interface</h3>
+        <p>Simple UI for quick image uploads and instant results.</p>
+    </div>
+</div>
+
+<div class="about-section">
+    <h2>Why Choose Our Face Detection App?</h2>
+    <p>Leverage AI-powered face detection for security, social media, and research.</p>
+    <p>Our system ensures accurate recognition even in different lighting conditions and image qualities.</p>
+    <p>No complex installation required – just upload your image and detect faces instantly!</p>
+</div>
+
+<div class="footer">
+    <p>Face Detection Web App &copy; 2025 | Powered by AI & Computer Vision</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Face Detection Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Inline CSS for setting background image */
+        body {
+            background: url("{{ url_for('static', filename='images/img4.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="nav-title">Face Detection Web App</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+            <a href="/detect">Detect</a>
+            <a href="/help">Help</a>
+        </div>
+    </div>
+
+    <body class="about-page"><!-- About Page Content -->
+    <div class="container">
+        <h2 class="main-heading">About This Application</h2>
+        <p class="description">
+            The <strong>Face Detection Web App</strong> is an advanced AI-powered tool designed to detect human faces in uploaded images.
+            Our system utilizes <b>MTCNN</b> (Multi-task Cascaded Convolutional Networks) and <b>B-MTCNN</b>, an optimized version, to ensure **high accuracy and performance**.
+        </p>
+
+        <div class="features-container">
+            <h3>🔍 Key Features:</h3>
+            <ul class="feature-list">
+                <li>✔️ Supports both MTCNN and B-MTCNN algorithms.</li>
+                <li>✔️ Fast and precise face detection.</li>
+                <li>✔️ User-friendly interface for quick uploads.</li>
+                <li>✔️ Real-time processing with high accuracy.</li>
+                <li>✔️ Secure and efficient image handling.</li>
+            </ul>
+        </div>
+
+        <div class="how-it-works">
+            <h3>⚡ How It Works?</h3>
+            <p class="description">
+                1️⃣ **Upload an image** containing one or multiple faces. <br>
+                2️⃣ Choose between **MTCNN** and **B-MTCNN** for detection. <br>
+                3️⃣ The model analyzes and highlights detected faces. <br>
+                4️⃣ View the **detection results** instantly!
+            </p>
+        </div>
+
+        <div class="why-detection">
+            <h3>🎯 Why Face Detection?</h3>
+            <p class="description">
+                Face detection technology is widely used in **security systems, biometric authentication, photo tagging, and emotion recognition**.
+                This web app allows you to experience **modern AI-powered face detection with precision and efficiency**.
+            </p>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <a href="/detect" class="btn">Try Face Detection</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Face Detection Web App. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

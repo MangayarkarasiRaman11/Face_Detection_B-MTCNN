@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Face Detection{% endblock %}
+
+{% block content %}
+<style>
+    /* Background styling */
+    body {
+        background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        color: white;
+    }
+
+    .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 80%;
+    }
+
+    .text {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .text h1, .text h2 {
+        color: #ffcc00;
+    }
+
+    .text p {
+        font-size: 18px;
+    }
+
+    .image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .image img {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .upload-section {
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .upload-section input, .upload-section button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .btn-mtcnn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn-bmtcnn {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="home-container">
+    <div class="section">
+        <div class="text">
+            <h1>Welcome to the Face Detection System</h1>
+            <p>Detect faces in images using AI-powered MTCNN and B-MTCNN methods. Upload an image and let our system identify faces with precision.</p>
+            <a href="{{ url_for('detect') }}"><button class="btn-mtcnn">Start Detection</button></a>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/face_detection.jpg') }}" alt="Face Detection">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/ai_tech.jpg') }}" alt="AI Face Detection">
+        </div>
+        <div class="text">
+            <h2>Advanced AI for Face Recognition</h2>
+            <p>Our system utilizes deep learning and facial landmark detection to improve recognition accuracy.</p>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <h2>Upload an Image for Face Detection</h2>
+        <form action="/detect" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit" class="btn-mtcnn" name="method" value="MTCNN">Detect with MTCNN</button>
+            <button type="submit" class="btn-bmtcnn" name="method" value="B-MTCNN">Detect with B-MTCNN</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
