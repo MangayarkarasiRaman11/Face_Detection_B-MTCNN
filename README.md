@@ -8,16 +8,12 @@ This web application allows users to upload an image and detect faces using two 
 - Results displayed with bounding boxes around detected faces
 
 ## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-repo/face-detection-webapp.git
-   cd face-detection-webapp
-   ```
-2. Install the required dependencies:
+
+1. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the Flask application:
+2. Run the Flask application:
    ```bash
    python app.py
    ```
@@ -34,5 +30,3 @@ This web application allows users to upload an image and detect faces using two 
 - NumPy
 - MTCNN
 
-## License
-This project is licensed under the MIT License.
